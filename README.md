@@ -2,7 +2,7 @@
 
 Suggestions for improvement are welcome. Also, [here is a website](https://www.tablesgenerator.com) which can generate LaTeX code for tables.
 
-For getting the command via machine learning, you can use [this(http://detexify.kirelabs.org/classify.html)] 
+For getting the command via machine learning, you can use [this](http://detexify.kirelabs.org/classify.html) 
 
 
 ### Examples
