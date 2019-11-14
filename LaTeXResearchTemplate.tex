@@ -1,0 +1,123 @@
+% -- LaTeX Template for Research Papers (S. Venkatraman) --
+
+\documentclass[10pt]{article}
+\usepackage{
+  amsmath, amssymb, mathtools, bbm, units,          % Math typesetting packages (units for \nicefrac)
+  graphicx, wrapfig, subfig, float,                 % Image packages
+  listings, color, inconsolata,                     % Code packages
+  fancyhdr, sectsty, hyperref, enumerate, framed }  % Headers/footers, section fonts, links
+
+% -- Page style settings --
+% \flushbottom                                      % Uncomment to make text fill the entire page
+% \setlength\parindent{0pt}                         % Uncomment to remove paragraph indentation
+\usepackage[bottom]{footmisc}                       % Anchor footnotes to the bottom of the page
+\renewcommand{\baselinestretch}{1.05}               % Adjust line spacing
+\allowdisplaybreaks                                 % Allow multi-line equations to break to next page
+\usepackage{geometry}\geometry{letterpaper,         % Set page margins
+  left=1.65in, right=1.65in,
+  top=1.15in, bottom=1.1in,
+  headsep=.2in}
+
+% -- Frame settings (for framed text) --
+\setlength\FrameSep{0.55em}
+\setlength\OuterFrameSep{\partopsep}
+
+% -- Settings for internal/external links --
+\hypersetup{colorlinks=true, linkcolor=magenta, citecolor=magenta}
+
+% -- Comment these lines to make section/subsection title fonts smaller --
+\sectionfont{\fontsize{13}{15}\selectfont}
+\subsectionfont{\fontsize{11}{15}\selectfont}
+
+% -- Settings for code listings --
+\definecolor{greenText}{rgb}{0.5, 0.7, 0.5}
+\definecolor{greyText}{rgb}{0.5, 0.5, 0.5}
+\definecolor{codeFrame}{rgb}{0.7, 0.5, 0.5}
+\definecolor{backgroundColor}{rgb}{0.95, 0.95, 0.92}
+\lstdefinestyle{code} {
+  % backgroundcolor=\color{backgroundColor},     % Uncomment this to add green background to code listing
+  frame=single,                                  % Comment this line and the next to remove green border
+  rulecolor=\color{greenText},
+  numberstyle=\tiny\color{greyText},
+  commentstyle=\color{greenText},
+  basicstyle=\linespread{1}\ttfamily\footnotesize,
+  keywordstyle=\ttfamily\footnotesize,
+  showstringspaces=false,
+  numbers=left,
+  numbersep=5pt }
+\lstset{style=code} 
+
+% -- Math/Statistics commands --
+
+% 'numberthis' is a custom command that adds a reference number to a single line of a
+% multi-line equation, e.g. "\numberthis\label{(name here)}" in align/gather environment
+\newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
+
+% 'question' is a custom command for writing the statement of a problem; first argument
+% is the question number, second argument is the statement
+\newcommand{\question}[2]{\begin{framed}\noindent \textbf{Question #1}\\ #2\end{framed}}
+
+% Shortcuts for bold math symbols; \bg{...} is for bold Greek letters
+\let\b\mathbf
+\let\bg\boldsymbol
+
+% \mathscr{(letter here)} is a nice font for vector spaces
+\usepackage[mathscr]{euscript}
+
+% Convergence: right arrow with optional text above indicating type of convergence
+\newcommand{\converge}[1][]{\xrightarrow{#1}}
+
+% Normal distribution: first argument is the mean, second argument is the variance
+\newcommand{\normal}[2]{\mathcal{N}(#1,#2)}
+
+% iid random variables
+\newcommand{\iid}{\stackrel{\text{iid}}{\sim}}
+
+% Natural, rational, real, and complex numbers. Probability and expectation.
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\pr}{\mathbb{P}}
+\newcommand{\E}{\mathbb{E}}
+
+% argmax, argmin, argsup, arginf, variance, covariance, bias
+\DeclareMathOperator*{\argmax}{argmax}
+\DeclareMathOperator*{\argmin}{argmin}
+\DeclareMathOperator*{\argsup}{argsup}
+\DeclareMathOperator*{\arginf}{arginf}
+\DeclareMathOperator*{\var}{Var}
+\DeclareMathOperator*{\cov}{Cov}
+\DeclareMathOperator*{\bias}{Bias}
+
+% -- Centered header text and footer (to appear on every page) --
+\pagestyle{fancy}
+\renewcommand{\footrulewidth}{0.5pt}
+\renewcommand{\headrulewidth}{0.5pt}
+\chead{{\small Shorter Version of Paper Title}}
+\lhead{}\rhead{}
+
+% -- Document starts here --
+\begin{document}
+\title{Title of Paper}
+\author{\small{Sara Venkatraman}}\date{}
+\maketitle
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a rutrum ipsum, eget hendrerit neque. Fusce congue, mi quis sagittis blandit, odio justo mollis est, at tincidunt justo magna eget turpis. Ut placerat felis sapien, vel fermentum augue tristique at. Nam posuere tellus id tellus faucibus mollis. Aenean non purus ac felis pretium pellentesque eget at turpis. Phasellus pulvinar metus nec lorem euismod, vitae viverra purus porttitor. Morbi pulvinar quam ac nibh congue, at aliquam neque fermentum. Ut suscipit faucibus velit sit amet posuere. Vivamus eget vehicula ipsum. Suspendisse potenti. In luctus urna in hendrerit rutrum. \smallskip
+
+Sed sagittis quam sed diam hendrerit, tempor rhoncus massa euismod. Duis posuere velit non elit iaculis, eu faucibus lectus egestas. Donec eu malesuada libero, vitae aliquet est. In non nulla turpis. Suspendisse et sem non elit imperdiet accumsan. Mauris eleifend ut ante vitae rutrum. Vivamus tincidunt tellus ac risus interdum, a ultrices ante convallis. Nunc feugiat pellentesque porttitor. Nulla viverra posuere nibh, rhoncus finibus leo sollicitudin a. Ut id interdum mauris, eget dignissim diam. Maecenas ultrices euismod feugiat. Nullam tempor ligula non magna dapibus, id luctus tortor pretium. Sed id dolor magna. Curabitur ullamcorper sagittis quam tincidunt ultricies. Phasellus vel turpis arcu. Donec ullamcorper mi dui.
+
+\section{First section}
+
+\subsection{First subsection}
+
+% -- Bibliography --
+{\small\begin{thebibliography}{1}    
+    \bibitem{citation1}
+    Author.
+    ``Title''.
+    \textit{Journal Name}.
+    Year Volume: PageStart-PageEnd.
+\end{thebibliography}}
+
+\end{document}
