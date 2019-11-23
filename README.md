@@ -4,6 +4,9 @@ Suggestions for improvement are welcome. Also, [here is a website](https://www.t
 
 To get a command via machine learning, you can use [this](http://detexify.kirelabs.org/classify.html) 
 
+
+# Acknowledgements
+
 Thanks Sarah for the contribution to the templates, what I have done is just a tinny modification according to my working habits.
 
 ### Examples
