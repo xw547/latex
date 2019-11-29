@@ -114,8 +114,21 @@
 \newenvironment{aenum}
 {
 \begin{enumerate}[label=(\alph*)]\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
-
 }{\end{enumerate}}
+
+%Define a new enviroment aligned
+\newenvironment{alieq}
+{\begin{equation}
+\begin{algined}}
+{\end{aligned}
+\end{equation}}
+
+%Define a new enviroment aligned
+\newenvironment{alieq}
+{\begin{equation}
+\begin{aligned}}
+{\end{aligned}
+\end{equation}}
 
 % argmax, argmin, argsup, arginf, variance, covariance, bias, range, 'with respect to', matrix diagonal, matrix trace
 \DeclareMathOperator*{\argmax}{argmax}
