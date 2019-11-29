@@ -107,6 +107,15 @@
 \newcommand{\B}{\mathcal{B}}
 \newcommand{\tth}{\text{th}}
 \newcommand{\Oh}{\mathcal{O}}
+\newcommand{\sumni}[1]{\sum_{n={#1}}^{\infty}}
+\newcommand{\sumn}{\sum_{n=0}^{\infty}}
+
+%Declare a new environment using the current \enmerate enviroment.
+\newenvironment{aenum}
+{
+\begin{enumerate}[label=(\alph*)]\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
+
+}{\end{enumerate}}
 
 % argmax, argmin, argsup, arginf, variance, covariance, bias, range, 'with respect to', matrix diagonal, matrix trace
 \DeclareMathOperator*{\argmax}{argmax}
