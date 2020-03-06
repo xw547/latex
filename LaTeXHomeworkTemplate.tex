@@ -6,7 +6,7 @@
 % 'units' is for '\nicefrac' (diagonally-stacked fractions), 'bbm' is for indicator functions (e.g. '\mathbbm{1}')
 \usepackage{
   amsmath, amsthm, amssymb, mathtools, bbm, units,             % Math typesetting packages (units for \nicefrac)
-  graphicx, wrapfig, subfig, float,                            % Graphics packages
+  graphicx, wrapfig, caption, float,                            % Graphics packages
   listings, color, inconsolata, pythonhighlight,               % Code packages
   fancyhdr, sectsty, hyperref, enumerate, enumitem, framed }   % Headers/footers, section fonts, links, lists
 
@@ -123,12 +123,6 @@
 {\end{aligned}
 \end{equation}}
 
-%Define a new enviroment aligned
-\newenvironment{alieq}
-{\begin{equation}
-\begin{aligned}}
-{\end{aligned}
-\end{equation}}
 
 % argmax, argmin, argsup, arginf, variance, covariance, bias, range, 'with respect to', matrix diagonal, matrix trace
 \DeclareMathOperator*{\argmax}{argmax}
