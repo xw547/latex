@@ -1,0 +1,151 @@
+\setlength{\oddsidemargin}{0.25 in}
+\setlength{\evensidemargin}{0.25 in}
+\setlength{\topmargin}{-0.6 in}
+\setlength{\textwidth}{6.5 in}
+\setlength{\textheight}{8.5 in}
+\setlength{\headsep}{0.75 in}
+\setlength{\parindent}{0 in}
+\setlength{\parskip}{0.1 in}
+
+%
+% ADD PACKAGES here:
+%
+
+\usepackage{amsmath, amsfonts, graphicx, amsthm, amssymb, mathtools, bbm, units,             % Math typesetting packages (units for \nicefrac)
+graphicx, wrapfig, caption, float,                            % Graphics packages
+listings, color, inconsolata, pythonhighlight,               % Code packages
+fancyhdr, sectsty, hyperref, enumerate, enumitem, framed,
+setspace, array}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+
+\hypersetup{colorlinks=true, linkcolor=magenta}
+
+
+%
+% The following commands set up the lecnum (lecture number)
+% counter and make various numbering schemes work relative
+% to the lecture number.
+%
+\newcounter{lecnum}
+\renewcommand{\thepage}{\thelecnum-\arabic{page}}
+\renewcommand{\thesection}{\thelecnum.\arabic{section}}
+\renewcommand{\theequation}{\thelecnum.\arabic{equation}}
+\renewcommand{\thefigure}{\thelecnum.\arabic{figure}}
+\renewcommand{\thetable}{\thelecnum.\arabic{table}}
+
+%
+% The following macro is used to generate the header.
+%
+\newcommand{\lecture}[4]{
+   \pagestyle{myheadings}
+   \thispagestyle{plain}
+   \newpage
+   \setcounter{lecnum}{#1}
+   \setcounter{page}{1}
+   \noindent
+   \begin{center}
+   \framebox{
+      \vbox{\vspace{2mm}
+    \hbox to 6.28in { {\bf STSCI 6730 Mathematical Statistics
+	\hfill Spring 2021} }
+       \vspace{4mm}
+       \hbox to 6.28in { {\Large \hfill Lecture #1: #2  \hfill} }
+       \vspace{2mm}
+       \hbox to 6.28in { {\it Lecturer: #3 \hfill Scribes: #4} }
+      \vspace{2mm}}
+   }
+   \end{center}
+   \markboth{Lecture #1: #2}{Lecture #1: #2}
+
+   {\bf Note}: {\it LaTeX template courtesy of UC Berkeley EECS dept.}
+
+   {\bf Disclaimer}: {\it These notes have not been subjected to the
+   usual scrutiny reserved for formal publications.  They may be distributed
+   outside this class only with the permission of the Instructor.}
+   \vspace*{4mm}
+}
+
+
+% Use these for theorems, lemmas, proofs, etc.
+\newtheorem{theorem}{Theorem}[lecnum]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+
+% **** IF YOU WANT TO DEFINE ADDITIONAL MACROS FOR YOURSELF, PUT THEM HERE:
+
+% -- Math/Statistics commands --
+
+% 'numberthis' is a custom command that adds a reference number to a single line of a
+% multi-line equation, e.g. "\numberthis\label{(name here)}" in align/gather environment
+\newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
+
+% Shortcuts for bold math symbols; \bg{...} is for bold Greek letters
+\let\b\mathbf
+\let\bg\boldsymbol
+
+% \mathscr{(letter here)} is a nice font for vector spaces
+\usepackage[mathscr]{euscript}
+
+% Convergence: right arrow with optional text above
+% Usage: '\converge[w]' for weak convergence
+\newcommand{\converge}[1][]{\xrightarrow{#1}}
+
+% Normal distribution: first argument is the mean, second argument is the variance
+% Usage: '\normal{\mu}{\sigma}'
+\newcommand{\normal}[2]{\mathcal{N}(#1,#2)}
+
+% Uniform distribution: first parameter is left endpoint, second parameter is right endpoint
+% Usage: '\unif{0}{1}'
+\newcommand{\unif}[2]{\text{Uniform}(#1,#2)}
+
+% iid random variables
+\newcommand{\iid}{\stackrel{\text{iid}}{\sim}}
+
+% Natural, integer, rational, real, and complex numbers. Probability, expectation, and Borel sigma algebra. Non-italicized 'th' for math
+% mode, e.g. $n^\tth$. Big-O.
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\pr}{\mathbb{P}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\B}{\mathcal{B}}
+\newcommand{\tth}{\text{th}}
+\newcommand{\Oh}{\mathcal{O}}
+\newcommand{\sumni}[1]{\sum_{n={#1}}^{\infty}}
+\newcommand{\sumn}{\sum_{n=0}^{\infty}}
+
+%Declare a new environment using the current \enmerate enviroment.
+\newenvironment{aenum}
+{
+\begin{enumerate}[label=(\alph*)]\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
+}{\end{enumerate}}
+
+%Define a new enviroment aligned
+\newenvironment{alieq}
+{\begin{equation}
+\begin{algined}}
+{\end{aligned}
+\end{equation}}
+
+
+% argmax, argmin, argsup, arginf, variance, covariance, bias, range, 'with respect to', matrix diagonal, matrix trace
+\DeclareMathOperator*{\argmax}{argmax}
+\DeclareMathOperator*{\argmin}{argmin}
+\DeclareMathOperator*{\argsup}{argsup}
+\DeclareMathOperator*{\arginf}{arginf}
+\DeclareMathOperator*{\var}{Var}
+\DeclareMathOperator*{\cov}{Cov}
+\DeclareMathOperator*{\bias}{Bias}
+\DeclareMathOperator*{\ran}{ran}
+\DeclareMathOperator*{\dv}{d\!}
+\DeclareMathOperator*{\diag}{diag}
+\DeclareMathOperator*{\trace}{trace}
+\DeclareMathOperator*{\htheta}{\hat{\theta}}
+\DeclareMathOperator*{\randvs}{X_1,\cdots,X_n}
+
