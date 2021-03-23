@@ -2,8 +2,9 @@
 
 Suggestions for improvement are welcome. Also, [here is a website](https://www.tablesgenerator.com) which can generate LaTeX code for tables.
 
-To get a command via machine learning, you can use [this](http://detexify.kirelabs.org/classify.html) 
+To get a command via machine learning, you can use [Detexify](http://detexify.kirelabs.org/classify.html) 
 
+Also, my scribe template was borrowed from Dr. Gordon's [website](https://www.cs.cmu.edu/~ggordon/10725-F12/template.tex)
 
 # Acknowledgements
 
@@ -32,3 +33,4 @@ Thanks Sarah for the contribution to the templates, what I have done is just a t
 **Essay**
 
 <kbd><a href="#"><img src="https://user-images.githubusercontent.com/6864298/50462050-c180fb00-0950-11e9-9880-a7f19ee26d3f.png" width="535"/></kbd></a>
+
