@@ -2,9 +2,9 @@
 
 Suggestions for improvement are welcome. Also, [here is a website](https://www.tablesgenerator.com) which can generate LaTeX code for tables.
 
-To get a command via machine learning, you can use [Detexify](http://detexify.kirelabs.org/classify.html) 
+To get a command via machine learning, you can use [Detexify](http://detexify.kirelabs.org/classify.html). 
 
-Also, my scribe template was borrowed from Dr. Gordon's [website](https://www.cs.cmu.edu/~ggordon/10725-F12/template.tex)
+Also, my scribe template was borrowed from Dr. Gordon's [website](https://www.cs.cmu.edu/~ggordon/10725-F12/template.tex).
 
 # Acknowledgements
 
