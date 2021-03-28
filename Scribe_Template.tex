@@ -1,16 +1,46 @@
-%This LaTeX template is borrowed from https://www.cs.cmu.edu/~ggordon/10725-F12/template.tex, and slightly modified with my own macros.
-
 \documentclass[twoside]{article}
 
 %This command includes my macros, please don't delete.
 \include{xiaohan_scribing_macros}
+\usepackage{graphicx, subcaption}
+%
+% The following macro is used to generate the header.
+%
+\newcommand{\lecture}[4]{
+   \pagestyle{myheadings}
+   \thispagestyle{plain}
+   \newpage
+   \setcounter{lecnum}{#1}
+   \setcounter{page}{1}
+   \noindent
+   \begin{center}
+   \framebox{
+      \vbox{\vspace{2mm}
+    \hbox to 6.28in { {\bf STSCI 6520 Statistical Computing
+	\hfill Spring 2021} }
+       \vspace{4mm}
+       \hbox to 6.28in { {\Large \hfill Lecture #1: #2  \hfill} }
+       \vspace{2mm}
+       \hbox to 6.28in { {\it Lecturer: #3 \hfill Scribes: #4} }
+      \vspace{2mm}}
+   }
+   \end{center}
+   \markboth{Lecture #1: #2}{Lecture #1: #2}
 
+   {\bf Note}: {\it LaTeX template courtesy of UC Berkeley EECS dept.}
+
+   {\bf Disclaimer}: {\it These notes have not been subjected to the
+   usual scrutiny reserved for formal publications.  They may be distributed
+   outside this class only with the permission of the Instructor.}
+   \vspace*{4mm}
+}
+\DeclareMathOperator{\calc}{\mathcal{C}}
 
 \begin{document}
 \onehalfspacing
 %FILL IN THE RIGHT INFO.
 %\lecture{**LECTURE-NUMBER**}{**DATE**}{**LECTURER**}{**SCRIBE**}
-\lecture{Number}{Title}{Lecturer}{Scriber}
+\lecture{0}{Date}{Lecturer}{Scriber}
 
 % **** THIS ENDS THE EXAMPLES. DON'T DELETE THE FOLLOWING LINE:
 \end{document}
